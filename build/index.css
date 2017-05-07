@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=UnifrakturMaguntia');
+
+body {
+  background-color: #FAEBD7;
+}
+
+h2 {
+  font-family: UnifrakturMaguntia;
+  display: block;
+  text-align: center;
+  color: black;
+}
+
+p {
+  display: block;
+  text-align: center;
+  color: black;
+}
+
+img {
+  margin: auto;
+  display: block;
+  width: 20%;
+  height: 20%;
+}
+
+.points {
+  font-weight: bold;
+  display: inline;
+  font-size: 24px;
+}
