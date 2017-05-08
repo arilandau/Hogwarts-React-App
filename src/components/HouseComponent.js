@@ -1,32 +1,33 @@
 import React from 'react';
 
 class HouseComponent extends React.Component {
-  constructor(props) {
-    super(props)
+  constructor(props){
+    super(props);
 
     this.state = {
-      totalPoints: 0
+      points: 0
     }
-    this.addPoint = this.addPoint.bind(this);
-    this.minusPoint = this.minusPoint.bind(this);
+    this.addPoints = this.addPoints.bind(this);
+    this.minusPoints = this.minusPoints.bind(this);
   }
 
-  addPoint(event) {
-    let newTotal = this.state.totalPoints + 1;
-    this.setState({ totalPoints: newTotal});
+  addPoints(event) {
+    let newPoints = this.state.points + 10;
+    this.setState({ points: newPoints });
   }
 
-  minusPoint(event) {
-    let newTotal = this.state.totalPoints - 1;
-    this.setState({ totalPoints: newTotal});
+  minusPoints(event) {
+    let newPoints = this.state.points - 10;
+    this.setState({ points: newPoints });
   }
 
   render() {
-    return (
+    return(
       <div>
         <h2>{this.props.house}</h2>
-        <p>Points: {this.state.totalPoints}</p>
-        <p><div className="points" onClick={this.addPoint}>+      </div><div className="points" onClick={this.minusPoint}>      -</div></p>
+        <p>Points: {this.state.points}</p>
+        <div className="points" onClick={this.addPoints}>+</div>
+        <div className="points" onClick={this.minusPoints}>-</div>
       </div>
     );
   }
